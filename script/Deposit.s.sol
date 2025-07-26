@@ -13,9 +13,7 @@ contract DepositScript is Script {
         address payable vaultAddress = payable(vm.parseAddress(vaultStr));
         uint256 valueToSend = 1 ether;
 
-        (bool success, ) = vaultAddress.call{value: valueToSend}(
-            abi.encodeWithSignature("deposit()")
-        );
+        (bool success,) = vaultAddress.call{value: valueToSend}(abi.encodeWithSignature("deposit()"));
         require(success, "Deposit failed");
 
         vm.stopBroadcast();
