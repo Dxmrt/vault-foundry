@@ -1,0 +1,12 @@
+# Compiler files
+cache/
+out/
+
+# Allow broadcast/ for educational purposes
+!broadcast/
+
+# Docs
+docs/
+
+# Dotenv file
+.env

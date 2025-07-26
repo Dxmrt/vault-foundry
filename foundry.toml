@@ -1,0 +1,10 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+fs_permissions = [{ access = "read-write", path = "." }]
+dotenv = ".env"
+
+
+[rpc_endpoints]
+local = "${LOCAL_RPC_URL}"
